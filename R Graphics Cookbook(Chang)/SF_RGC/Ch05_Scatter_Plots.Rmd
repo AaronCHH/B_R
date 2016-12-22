@@ -788,7 +788,7 @@ pairs(c2009[,2:5])
 ```
 * **Discussion**  
 ```{r}
-====================================
+# ====================================
 panel.cor <- function(x, y, digits=2, prefix="", cex.cor, ...) {
     usr <- par("usr")
     on.exit(par(usr))
@@ -801,7 +801,7 @@ panel.cor <- function(x, y, digits=2, prefix="", cex.cor, ...) {
 }
 
 
-====================================
+# ====================================
 panel.hist <- function(x, ...) {
     usr <- par("usr")
     on.exit(par(usr))
@@ -815,13 +815,13 @@ panel.hist <- function(x, ...) {
 }
 
 
-====================================
+# ====================================
 pairs(c2009[,2:5], upper.panel = panel.cor,
                    diag.panel  = panel.hist,
                    lower.panel = panel.smooth)
 
 
-====================================
+# ====================================
 panel.lm <- function (x, y, col = par("col"), bg = NA, pch = par("pch"),
                             cex = 1, col.smooth = "black", ...) {
     points(x, y, pch = pch, col = col, bg = bg, cex = cex)
@@ -829,7 +829,7 @@ panel.lm <- function (x, y, col = par("col"), bg = NA, pch = par("pch"),
 }
 
 
-====================================
+# ====================================
 pairs(c2009[,2:5], pch=".",
                    upper.panel = panel.cor,
                    diag.panel  = panel.hist,
