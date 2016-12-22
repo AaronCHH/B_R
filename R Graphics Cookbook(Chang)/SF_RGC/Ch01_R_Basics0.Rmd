@@ -1,0 +1,117 @@
+---
+title: "chapter 1: R Basics"
+output: html_notebook
+---
+<!-- # Chapter 1. R Basics -->
+
+<!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
+
+- [1.1. Installing a Package](#11-installing-a-package)
+- [1.2. Loading a Package](#12-loading-a-package)
+- [1.3. Loading a Delimited Text Data File](#13-loading-a-delimited-text-data-file)
+- [1.4. Loading Data from an Excel File](#14-loading-data-from-an-excel-file)
+- [1.5. Loading Data from an SPSS File](#15-loading-data-from-an-spss-file)
+
+<!-- tocstop -->
+
+## 1.1. Installing a Package
+  * Problem  
+    You want to install a package from CRAN.  
+
+  * Solution  
+```{r}  
+    install.packages("ggplot2" )  
+```
+  * Discussion  
+
+## 1.2. Loading a Package
+  * Problem  
+    You want to load an installed package.  
+
+  * Solution ```{R}
+library(ggplot2```  
+  * Discussion  
+
+## 1.3. Loading a Delimited Text Data File
+  * Problem  
+    You want to load data from a delimited text file.  
+
+  * Solution  
+```{r}
+    data <-  read.csv("datafile.csv" )
+```
+  * Discussion  
+```{R}
+# ====================================
+data <- read.csv("datafile.csv", header=FALSE)
+
+# ====================================
+# Manually assign the header names
+names(data) <- c("Column1","Column2","Column3")
+
+# ====================================
+data <- read.csv("datafile.csv", sep="\t")
+
+# ====================================
+data <- read.csv("datafile.csv", stringsAsFactors=FALSE)
+# Convert to factor
+data$Sex <- factor(data$Sex)
+str(data)
+```  
+  * See Also  
+
+## 1.4. Loading Data from an Excel File
+  * Problem  
+    You want to load data from an Excel file.  
+
+  * Solution  
+```{r}
+# Only need to install once
+install.packages("xlsx")
+
+library(xslx)
+data <- read.xlsx("datafile.xlsx", 1)
+```    
+```{r}
+# Only need to install once
+install.packages("gdata")
+
+library(gdata)
+# Read first sheet
+data <- read.xls("datafile.xls")
+```  
+
+  * Discussion  
+```{R}
+# ====================================
+data <- read.xlsx("datafile.xls", sheetIndex=2)
+
+data <- read.xlsx("datafile.xls", sheetName="Revenues")
+
+
+# ====================================
+data <- read.xls("datafile.xls", sheet=2)
+```
+
+
+  * See Also  
+
+## 1.5. Loading Data from an SPSS File
+  * Problem  
+    You want to load data from an SPSS file.  
+
+  * Solution  
+```{r}  
+# Only need to install the first time
+install.packages("foreign")
+
+library(foreign)
+data <- read.spss("datafile.sav")  
+```
+  * Discussion  
+    The foreign package also includes functions to load from other formats, including:
+    * read.octave(): Octave and MATLAB
+    * read.systat(): SYSTAT
+    * read.xport(): SAS XPORT
+    * read.dta(): Stata
+  * See Also  

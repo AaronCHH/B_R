@@ -1,0 +1,263 @@
+---
+title: "Chapter 5. Scatter Plots"
+output: html_notebook
+---
+
+# Chapter 5. Scatter Plots
+
+<!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
+
+- [Chapter 5. Scatter Plots](#chapter-5-scatter-plots)
+	- [5.1. Making a Basic Scatter Plot](#51-making-a-basic-scatter-plot)
+	- [5.2. Grouping Data Points by a Variable Using Shape or Color](#52-grouping-data-points-by-a-variable-using-shape-or-color)
+	- [5.3. Using Different Point Shapes](#53-using-different-point-shapes)
+	- [5.4. Mapping a Continuous Variable to Color or Size](#54-mapping-a-continuous-variable-to-color-or-size)
+	- [5.5. Dealing with Overplotting](#55-dealing-with-overplotting)
+	- [5.6. Adding Fitted Regression Model Lines](#56-adding-fitted-regression-model-lines)
+	- [5.7. Adding Fitted Lines from an Existing Model](#57-adding-fitted-lines-from-an-existing-model)
+	- [5.8. Adding Fitted Lines from Multiple Existing Models](#58-adding-fitted-lines-from-multiple-existing-models)
+	- [5.9. Adding Annotations with Model Coefficients](#59-adding-annotations-with-model-coefficients)
+	- [5.10. Adding Marginal Rugs to a Scatter Plot](#510-adding-marginal-rugs-to-a-scatter-plot)
+	- [5.11. Labeling Points in a Scatter Plot](#511-labeling-points-in-a-scatter-plot)
+	- [5.12. Creating a Balloon Plot](#512-creating-a-balloon-plot)
+	- [5.13. Making a Scatter Plot Matrix](#513-making-a-scatter-plot-matrix)
+
+<!-- tocstop -->
+
+## 5.1. Making a Basic Scatter Plot
+* **Problem**
+  You want to make a scatter plot.  
+
+* **Solution**
+```{R}
+library(gcookbook) # For the data set
+
+# List the two columns we'll use
+heightweight[, c("ageYear", "heightIn")]
+
+ ageYear heightIn
+   11.92     56.3
+   12.92     62.3
+   12.75     63.3
+...
+   13.92     62.0
+   12.58     59.3
+
+# ====================================
+ggplot(heightweight, aes(x=ageYear, y=heightIn)) + geom_point()
+
+```
+
+* **Discussion**
+```{r}
+# ====================================
+ggplot(heightweight, aes(x=ageYear, y=heightIn)) + geom_point(shape=21)
+
+# ====================================
+ggplot(heightweight, aes(x=ageYear, y=heightIn)) + geom_point(size=1.5)
+
+```
+
+## 5.2. Grouping Data Points by a Variable Using Shape or Color
+* **Problem**
+  You want to group points by some variable, using shape or color.  
+
+* **Solution**
+```{r}
+library(gcookbook) # For the data set
+# Show the three columns we'll use
+heightweight[, c("sex", "ageYear", "heightIn")]
+
+ sex ageYear heightIn
+   f   11.92     56.3
+   f   12.92     62.3
+   f   12.75     63.3
+...
+   m   13.92     62.0
+   m   12.58     59.3
+
+
+# ====================================
+ggplot(heightweight, aes(x=ageYear, y=heightIn, colour=sex)) + geom_point()
+
+ggplot(heightweight, aes(x=ageYear, y=heightIn, shape=sex)) + geom_point()
+
+```
+
+* **Discussion**
+```{R}
+# ====================================
+ggplot(heightweight, aes(x=ageYear, y=heightIn, shape=sex, colour=sex)) +
+    geom_point()
+
+
+# ====================================
+ggplot(heightweight, aes(x=ageYear, y=heightIn, shape=sex, colour=sex)) +
+    geom_point() +
+    scale_shape_manual(values=c(1,2)) +
+    scale_colour_brewer(palette="Set1")
+```    
+
+* **See Also**
+
+## 5.3. Using Different Point Shapes
+* **Problem**
+  You want to use point shapes that are different from the defaults.  
+
+* **Solution**
+```{r}
+# ====================================
+library(gcookbook) # For the data set
+
+ggplot(heightweight, aes(x=ageYear, y=heightIn)) + geom_point(shape=3)
+
+
+# ====================================
+# Use slightly larger points and use a shape scale with custom values
+ggplot(heightweight, aes(x=ageYear, y=heightIn, shape=sex)) +
+    geom_point(size=3) + scale_shape_manual(values=c(1, 4))
+```
+
+* **Discussion**
+```{r}
+# Make a copy of the data
+hw <- heightweight
+# Categorize into <100 and >=100 groups
+hw$weightGroup <- cut(hw$weightLb, breaks=c(-Inf, 100, Inf),
+                      labels=c("< 100", ">= 100"))
+
+# Use shapes with fill and color, and use colors that are empty (NA) and
+# filled
+ggplot(hw, aes(x=ageYear, y=heightIn, shape=sex, fill=weightGroup)) +
+    geom_point(size=2.5) +
+    scale_shape_manual(values=c(21, 24)) +
+    scale_fill_manual(values=c(NA, "black"),
+      guide=guide_legend(override.aes=list(shape=21)))
+
+```
+
+* **See Also**
+
+## 5.4. Mapping a Continuous Variable to Color or Size
+* **Problem**
+  You want to represent a third continuous variable using color or size.  
+
+* **Solution**
+```{R}
+# ====================================
+library(gcookbook) # For the data set
+
+# List the four columns we'll use
+heightweight[, c("sex", "ageYear", "heightIn", "weightLb")]
+
+ sex ageYear heightIn weightLb
+   f   11.92     56.3     85.0
+   f   12.92     62.3    105.0
+   f   12.75     63.3    108.0
+...
+   m   13.92     62.0    107.5
+   m   12.58     59.3     87.0
+
+# ====================================
+ggplot(heightweight, aes(x=ageYear, y=heightIn, colour=weightLb)) + geom_point()
+
+ggplot(heightweight, aes(x=ageYear, y=heightIn, size=weightLb)) + geom_point()
+
+```    
+* **Discussion**
+```{r}
+====================================
+ggplot(heightweight, aes(x=weightLb, y=heightIn, fill=ageYear)) +
+    geom_point(shape=21, size=2.5) +
+    scale_fill_gradient(low="black", high="white")
+
+# Using guide_legend() will result in a discrete legend instead of a colorbar
+ggplot(heightweight, aes(x=weightLb, y=heightIn, fill=ageYear)) +
+    geom_point(shape=21, size=2.5) +
+    scale_fill_gradient(low="black", high="white", breaks=12:17,
+                        guide=guide_legend())
+
+====================================
+ggplot(heightweight, aes(x=ageYear, y=heightIn, size=weightLb, colour=sex)) +
+    geom_point(alpha=.5) +
+    scale_size_area() +     # Make area proportional to numeric value
+    scale_colour_brewer(palette="Set1")
+
+```    
+
+* **See Also**
+
+## 5.5. Dealing with Overplotting
+* **Problem**
+
+* **Solution**
+
+* **Discussion**
+
+* **See Also**
+
+## 5.6. Adding Fitted Regression Model Lines
+* **Problem**
+
+* **Solution**
+
+* **Discussion**
+
+## 5.7. Adding Fitted Lines from an Existing Model
+* **Problem**
+
+* **Solution**
+
+* **Discussion**
+
+## 5.8. Adding Fitted Lines from Multiple Existing Models
+* **Problem**
+
+* **Solution**
+
+* **Discussion**
+
+## 5.9. Adding Annotations with Model Coefficients
+* **Problem**
+
+* **Solution**
+
+* **Discussion**
+
+* **See Also**
+
+## 5.10. Adding Marginal Rugs to a Scatter Plot
+* **Problem**
+
+* **Solution**
+
+* **Discussion**
+
+* **See Also**
+
+## 5.11. Labeling Points in a Scatter Plot
+* **Problem**
+
+* **Solution**
+
+* **Discussion**
+
+* **See Also**
+
+## 5.12. Creating a Balloon Plot
+* **Problem**
+
+* **Solution**
+
+* **Discussion**
+
+* **See Also**
+
+## 5.13. Making a Scatter Plot Matrix
+* **Problem**
+
+* **Solution**
+
+* **Discussion**
+
+* **See Also**
