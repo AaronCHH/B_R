@@ -1,0 +1,15 @@
+Ch01_R_Basics
+Ch02_Quickly_Exploring_Data
+Ch03_Bar_Graphs
+Ch04_Line_Graphs
+Ch05_Scatter_Plots
+Ch06_Summarized_Data_Distributions
+Ch07_Annotations
+Ch08_Axes
+Ch09_Controlling_the_Overall_Appearance_of_Graphs
+Ch10_Legends
+Ch11_Facets
+Ch12_Using_Colors_in_Plots
+Ch13_Miscellaneous_Graphs
+Ch14_Output_for_Presentation
+Ch15_Getting_Your_Data_into_Shape
