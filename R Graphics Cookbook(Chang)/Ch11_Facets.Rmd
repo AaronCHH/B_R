@@ -1,0 +1,123 @@
+---
+title: "Chapter 11. Facets"
+output: html_notebook
+---
+
+# Chapter 11. Facets
+
+<!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
+
+- [Chapter 11. Facets](#chapter-11-facets)
+	- [11.1. Splitting Data into Subplots with Facets](#111-splitting-data-into-subplots-with-facets)
+	- [11.2. Using Facets with Different Axes](#112-using-facets-with-different-axes)
+	- [11.3. Changing the Text of Facet Labels](#113-changing-the-text-of-facet-labels)
+	- [11.4. Changing the Appearance of Facet Labels and Headers](#114-changing-the-appearance-of-facet-labels-and-headers)
+
+<!-- tocstop -->
+
+## 11.1. Splitting Data into Subplots with Facets
+* **Problem**  
+  You want to plot subsets of your data in separate panels.  
+
+* **Solution**  
+```{R}      
+# The base plot
+p <- ggplot(mpg, aes(x=displ, y=hwy)) + geom_point()
+
+# Faceted by drv, in vertically arranged subpanels
+p + facet_grid(drv ~ .)
+
+# Faceted by cyl, in horizontally arranged subpanels
+p + facet_grid(. ~ cyl)
+
+# Split by drv (vertical) and cyl (horizontal)
+p + facet_grid(drv ~ cyl)
+
+
+# ====================================
+# Facet on class
+# Note there is nothing before the tilde
+p + facet_wrap( ~ class)
+```
+* **Discussion**  
+```{R}
+# These will have the same result: 2 rows and 4 cols
+p + facet_wrap( ~ class, nrow=2)
+p + facet_wrap( ~ class, ncol=4)
+```
+
+## 11.2. Using Facets with Different Axes
+* **Problem**  
+  You want subplots with different ranges or items on their axes.  
+
+* **Solution**  
+```{R}
+# The base plot
+p <- ggplot(mpg, aes(x=displ, y=hwy)) + geom_point()
+
+# With free y scales
+p + facet_grid(drv ~ cyl, scales="free_y")
+
+# With free x and y scales
+p + facet_grid(drv ~ cyl, scales="free")
+```
+
+* **Discussion**  
+
+* **See Also**  
+
+## 11.3. Changing the Text of Facet Labels
+* **Problem**  
+  You want to change the text of facet labels.  
+
+* **Solution**  
+```{R}
+mpg2 <- mpg  # Make a copy of the original data
+
+# Rename 4 to 4wd, f to Front, r to Rear
+levels(mpg2$drv)[levels(mpg2$drv)=="4"]  <- "4wd"
+levels(mpg2$drv)[levels(mpg2$drv)=="f"]  <- "Front"
+levels(mpg2$drv)[levels(mpg2$drv)=="r"]  <- "Rear"
+
+# Plot the new data
+ggplot(mpg2, aes(x=displ, y=hwy)) + geom_point() + facet_grid(drv ~ .)
+```
+
+* **Discussion**  
+```{r}
+# ====================================
+ggplot(mpg2, aes(x=displ, y=hwy)) + geom_point() +
+    facet_grid(drv ~ ., labeller = label_both)
+
+
+# ====================================
+mpg3 <- mpg
+
+levels(mpg3$drv)[levels(mpg3$drv)=="4"]  <- "4^{wd}"
+levels(mpg3$drv)[levels(mpg3$drv)=="f"]  <- "- Front %.% e^{pi * i}"
+levels(mpg3$drv)[levels(mpg3$drv)=="r"]  <- "4^{wd} - Front"
+
+ggplot(mpg3, aes(x=displ, y=hwy)) + geom_point() +
+    facet_grid(drv ~ ., labeller = label_parsed)
+```
+
+* **See Also**  
+
+## 11.4. Changing the Appearance of Facet Labels and Headers
+* **Problem**  
+  You want to change the appearance of facet labels and headers.  
+
+* **Solution**  
+```{R}
+library(gcookbook)  # For the data set
+
+ggplot(cabbage_exp, aes(x=Cultivar, y=Weight)) + geom_bar(stat="identity") +
+    facet_grid(. ~ Date) +
+    theme(strip.text = element_text(face="bold", size=rel(1.5)),
+          strip.background = element_rect(fill="lightblue", colour="black",
+                                          size=1))
+```                                          
+
+* **Discussion**  
+
+* **See Also**  
