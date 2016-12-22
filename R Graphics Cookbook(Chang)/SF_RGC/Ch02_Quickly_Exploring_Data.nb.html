@@ -173,76 +173,211 @@ $(document).ready(function () {
 
 
 <!-- rnb-text-begin -->
+<!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
+<ul>
+<li><a href="#21-creating-a-scatter-plot">2.1. Creating a Scatter Plot</a></li>
+<li><a href="#22-creating-a-line-graph">2.2. Creating a Line Graph</a></li>
+<li><a href="#23-creating-a-bar-graph">2.3. Creating a Bar Graph</a></li>
+<li><a href="#24-creating-a-histogram">2.4. Creating a Histogram</a></li>
+<li><a href="#25-creating-a-box-plot">2.5. Creating a Box Plot</a></li>
+<li><a href="#26-plotting-a-function-curve">2.6. Plotting a Function Curve</a></li>
+</ul>
+<!-- tocstop -->
 <div id="creating-a-scatter-plot" class="section level2">
 <h2>2.1. Creating a Scatter Plot</h2>
+<ul>
+<li><p>Problem<br />
+You want to create a scatter plot.</p></li>
+<li><p>Solution</p></li>
+</ul>
 <!-- rnb-text-end -->
 <!-- rnb-chunk-begin -->
 <!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucGxvdChtdGNhcnMkd3QsIG10Y2FycyRtcGcpXG5gYGAifQ== -->
 <pre class="r"><code>plot(mtcars$wt, mtcars$mpg)</code></pre>
 <!-- rnb-source-end -->
-<!-- rnb-plot-begin eyJjb25kaXRpb25zIjpbXSwiaGVpZ2h0IjozNzcuNjI2Nywic2l6ZV9iZWhhdmlvciI6MCwid2lkdGgiOjYxMX0= -->
-<p><img src="data:image/png;base64,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" /></p>
-<!-- rnb-plot-end -->
 <!-- rnb-chunk-end -->
 <!-- rnb-text-begin -->
-<p>==================================== library(ggplot2) qplot(mtcars<span class="math inline">\(wt, mtcars\)</span>mpg)</p>
-<p>==================================== qplot(wt, mpg, data=mtcars) # This is equivalent to: ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point()</p>
-<p>==================================== plot(pressure<span class="math inline">\(temperature, pressure\)</span>pressure, type=“l”)</p>
-<p>==================================== plot(pressure<span class="math inline">\(temperature, pressure\)</span>pressure, type=“l”) points(pressure<span class="math inline">\(temperature, pressure\)</span>pressure)</p>
-<p>lines(pressure<span class="math inline">\(temperature, pressure\)</span>pressure/2, col=“red”) points(pressure<span class="math inline">\(temperature, pressure\)</span>pressure/2, col=“red”)</p>
-<p>==================================== library(ggplot2) qplot(pressure<span class="math inline">\(temperature, pressure\)</span>pressure, geom=“line”)</p>
-<p>==================================== qplot(temperature, pressure, data=pressure, geom=“line”) # This is equivalent to: ggplot(pressure, aes(x=temperature, y=pressure)) + geom_line()</p>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxubGlicmFyeShnZ3Bsb3QyKVxucXBsb3QobXRjYXJzJHd0LCBtdGNhcnMkbXBnKVxuYGBgIn0= -->
+<pre class="r"><code>library(ggplot2)
+qplot(mtcars$wt, mtcars$mpg)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxucXBsb3Qod3QsIG1wZywgZGF0YT1tdGNhcnMpXG4jIFRoaXMgaXMgZXF1aXZhbGVudCB0bzpcbmdncGxvdChtdGNhcnMsIGFlcyh4PXd0LCB5PW1wZykpICsgZ2VvbV9wb2ludCgpXG5gYGAifQ== -->
+<pre class="r"><code>qplot(wt, mpg, data=mtcars)
+# This is equivalent to:
+ggplot(mtcars, aes(x=wt, y=mpg)) + geom_point()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>See Also</li>
+</ul>
 </div>
-<div id="lines-and-points-together" class="section level1">
-<h1>Lines and points together</h1>
-<p>qplot(temperature, pressure, data=pressure, geom=c(“line”, “point”)) # Equivalent to: ggplot(pressure, aes(x=temperature, y=pressure)) + geom_line() + geom_point()</p>
-<p>==================================== barplot(BOD<span class="math inline">\(demand, names.arg=BOD\)</span>Time)</p>
-<p>==================================== table(mtcars$cyl)</p>
-<p>4 6 8 11 7 14 # There are 11 cases of the value 4, 7 cases of 6, and 14 cases of 8</p>
-<p>==================================== # Generate a table of counts barplot(table(mtcars$cyl))</p>
-<p>==================================== library(ggplot2) qplot(BOD<span class="math inline">\(Time, BOD\)</span>demand, geom=“bar”, stat=“identity”)</p>
+<div id="creating-a-line-graph" class="section level2">
+<h2>2.2. Creating a Line Graph</h2>
+<ul>
+<li><p>Problem<br />
+You want to create a line graph.</p></li>
+<li><p>Solution</p></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbnBsb3QocHJlc3N1cmUkdGVtcGVyYXR1cmUsIHByZXNzdXJlJHByZXNzdXJlLCB0eXBlPVwibFwiKVxuXG5cbiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG5wbG90KHByZXNzdXJlJHRlbXBlcmF0dXJlLCBwcmVzc3VyZSRwcmVzc3VyZSwgdHlwZT1cImxcIilcbnBvaW50cyhwcmVzc3VyZSR0ZW1wZXJhdHVyZSwgcHJlc3N1cmUkcHJlc3N1cmUpXG5cbmxpbmVzKHByZXNzdXJlJHRlbXBlcmF0dXJlLCBwcmVzc3VyZSRwcmVzc3VyZS8yLCBjb2w9XCJyZWRcIilcbnBvaW50cyhwcmVzc3VyZSR0ZW1wZXJhdHVyZSwgcHJlc3N1cmUkcHJlc3N1cmUvMiwgY29sPVwicmVkXCIpXG5cblxuIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmxpYnJhcnkoZ2dwbG90MilcbnFwbG90KHByZXNzdXJlJHRlbXBlcmF0dXJlLCBwcmVzc3VyZSRwcmVzc3VyZSwgZ2VvbT1cImxpbmVcIilcblxuIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbnFwbG90KHRlbXBlcmF0dXJlLCBwcmVzc3VyZSwgZGF0YT1wcmVzc3VyZSwgZ2VvbT1cImxpbmVcIilcblxuIyBUaGlzIGlzIGVxdWl2YWxlbnQgdG86XG5nZ3Bsb3QocHJlc3N1cmUsIGFlcyh4PXRlbXBlcmF0dXJlLCB5PXByZXNzdXJlKSkgKyBnZW9tX2xpbmUoKVxuXG4jIExpbmVzIGFuZCBwb2ludHMgdG9nZXRoZXJcbnFwbG90KHRlbXBlcmF0dXJlLCBwcmVzc3VyZSwgZGF0YT1wcmVzc3VyZSwgZ2VvbT1jKFwibGluZVwiLCBcInBvaW50XCIpKVxuXG4jIEVxdWl2YWxlbnQgdG86XG5nZ3Bsb3QocHJlc3N1cmUsIGFlcyh4PXRlbXBlcmF0dXJlLCB5PXByZXNzdXJlKSkgKyBnZW9tX2xpbmUoKSArIGdlb21fcG9pbnQoKVxuXG5gYGAifQ== -->
+<pre class="r"><code># ====================================
+plot(pressure$temperature, pressure$pressure, type=&quot;l&quot;)
+
+
+# ====================================
+plot(pressure$temperature, pressure$pressure, type=&quot;l&quot;)
+points(pressure$temperature, pressure$pressure)
+
+lines(pressure$temperature, pressure$pressure/2, col=&quot;red&quot;)
+points(pressure$temperature, pressure$pressure/2, col=&quot;red&quot;)
+
+
+# ====================================
+library(ggplot2)
+qplot(pressure$temperature, pressure$pressure, geom=&quot;line&quot;)
+
+# ====================================
+qplot(temperature, pressure, data=pressure, geom=&quot;line&quot;)
+
+# This is equivalent to:
+ggplot(pressure, aes(x=temperature, y=pressure)) + geom_line()
+
+# Lines and points together
+qplot(temperature, pressure, data=pressure, geom=c(&quot;line&quot;, &quot;point&quot;))
+
+# Equivalent to:
+ggplot(pressure, aes(x=temperature, y=pressure)) + geom_line() + geom_point()
+</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>See Also</li>
+</ul>
 </div>
-<div id="convert-the-x-variable-to-a-factor-so-that-it-is-treated-as-discrete" class="section level1">
-<h1>Convert the x variable to a factor, so that it is treated as discrete</h1>
-<p>qplot(factor(BOD<span class="math inline">\(Time), BOD\)</span>demand, geom=“bar”, stat=“identity”)</p>
-<p>==================================== # cyl is continuous here qplot(mtcars$cyl)</p>
+<div id="creating-a-bar-graph" class="section level2">
+<h2>2.3. Creating a Bar Graph</h2>
+<ul>
+<li><p>Problem<br />
+You want to make a bar graph.</p></li>
+<li><p>Solution</p></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmJhcnBsb3QoQk9EJGRlbWFuZCwgbmFtZXMuYXJnPUJPRCRUaW1lKVxuXG5cbiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG50YWJsZShtdGNhcnMkY3lsKVxuXG4gNCAgNiAgOFxuMTEgIDcgMTRcbiMgVGhlcmUgYXJlIDExIGNhc2VzIG9mIHRoZSB2YWx1ZSA0LCA3IGNhc2VzIG9mIDYsIGFuZCAxNCBjYXNlcyBvZiA4XG5cblxuXG4jID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxuIyBHZW5lcmF0ZSBhIHRhYmxlIG9mIGNvdW50c1xuYmFycGxvdCh0YWJsZShtdGNhcnMkY3lsKSlcblxuXG4jID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxubGlicmFyeShnZ3Bsb3QyKVxucXBsb3QoQk9EJFRpbWUsIEJPRCRkZW1hbmQsIGdlb209XCJiYXJcIiwgc3RhdD1cImlkZW50aXR5XCIpXG5cbiMgQ29udmVydCB0aGUgeCB2YXJpYWJsZSB0byBhIGZhY3Rvciwgc28gdGhhdCBpdCBpcyB0cmVhdGVkIGFzIGRpc2NyZXRlXG5xcGxvdChmYWN0b3IoQk9EJFRpbWUpLCBCT0QkZGVtYW5kLCBnZW9tPVwiYmFyXCIsIHN0YXQ9XCJpZGVudGl0eVwiKVxuXG5cbiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09XG4jIGN5bCBpcyBjb250aW51b3VzIGhlcmVcbnFwbG90KG10Y2FycyRjeWwpXG5cbiMgVHJlYXQgY3lsIGFzIGRpc2NyZXRlXG5xcGxvdChmYWN0b3IobXRjYXJzJGN5bCkpXG5cblxuIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbiMgQmFyIGdyYXBoIG9mIHZhbHVlcy4gVGhpcyB1c2VzIHRoZSBCT0QgZGF0YSBmcmFtZSwgd2l0aCB0aGVcbiNcIlRpbWVcIiBjb2x1bW4gZm9yIHggdmFsdWVzIGFuZCB0aGUgXCJkZW1hbmRcIiBjb2x1bW4gZm9yIHkgdmFsdWVzLlxucXBsb3QoVGltZSwgZGVtYW5kLCBkYXRhPUJPRCwgZ2VvbT1cImJhclwiLCBzdGF0PVwiaWRlbnRpdHlcIilcbiMgVGhpcyBpcyBlcXVpdmFsZW50IHRvOlxuZ2dwbG90KEJPRCwgYWVzKHg9VGltZSwgeT1kZW1hbmQpKSArIGdlb21fYmFyKHN0YXQ9XCJpZGVudGl0eVwiKVxuXG5cbiMgQmFyIGdyYXBoIG9mIGNvdW50c1xucXBsb3QoZmFjdG9yKGN5bCksIGRhdGE9bXRjYXJzKVxuIyBUaGlzIGlzIGVxdWl2YWxlbnQgdG86XG5nZ3Bsb3QobXRjYXJzLCBhZXMoeD1mYWN0b3IoY3lsKSkpICsgZ2VvbV9iYXIoKVxuYGBgIn0= -->
+<pre class="r"><code># ====================================
+barplot(BOD$demand, names.arg=BOD$Time)
+
+
+# ====================================
+table(mtcars$cyl)
+
+ 4  6  8
+11  7 14
+# There are 11 cases of the value 4, 7 cases of 6, and 14 cases of 8
+
+
+
+# ====================================
+# Generate a table of counts
+barplot(table(mtcars$cyl))
+
+
+# ====================================
+library(ggplot2)
+qplot(BOD$Time, BOD$demand, geom=&quot;bar&quot;, stat=&quot;identity&quot;)
+
+# Convert the x variable to a factor, so that it is treated as discrete
+qplot(factor(BOD$Time), BOD$demand, geom=&quot;bar&quot;, stat=&quot;identity&quot;)
+
+
+# ====================================
+# cyl is continuous here
+qplot(mtcars$cyl)
+
+# Treat cyl as discrete
+qplot(factor(mtcars$cyl))
+
+
+# ====================================
+# Bar graph of values. This uses the BOD data frame, with the
+#&quot;Time&quot; column for x values and the &quot;demand&quot; column for y values.
+qplot(Time, demand, data=BOD, geom=&quot;bar&quot;, stat=&quot;identity&quot;)
+# This is equivalent to:
+ggplot(BOD, aes(x=Time, y=demand)) + geom_bar(stat=&quot;identity&quot;)
+
+
+# Bar graph of counts
+qplot(factor(cyl), data=mtcars)
+# This is equivalent to:
+ggplot(mtcars, aes(x=factor(cyl))) + geom_bar()</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>See Also</li>
+</ul>
 </div>
-<div id="treat-cyl-as-discrete" class="section level1">
-<h1>Treat cyl as discrete</h1>
-<p>qplot(factor(mtcars$cyl))</p>
-<p>==================================== # Bar graph of values. This uses the BOD data frame, with the #“Time” column for x values and the “demand” column for y values. qplot(Time, demand, data=BOD, geom=“bar”, stat=“identity”) # This is equivalent to: ggplot(BOD, aes(x=Time, y=demand)) + geom_bar(stat=“identity”)</p>
+<div id="creating-a-histogram" class="section level2">
+<h2>2.4. Creating a Histogram</h2>
+<ul>
+<li><p>Problem<br />
+You want to view the distribution of one-dimensional data with a histogram.</p></li>
+<li><p>Solution</p></li>
+</ul>
+<!-- rnb-text-end -->
+<!-- rnb-chunk-begin -->
+<!-- rnb-source-begin eyJkYXRhIjoiYGBgclxuIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT1cbmhpc3QobXRjYXJzJG1wZylcblxuIyBTcGVjaWZ5IGFwcHJveGltYXRlIG51bWJlciBvZiBiaW5zIHdpdGggYnJlYWtzXG5oaXN0KG10Y2FycyRtcGcsIGJyZWFrcz0xMClcblxuXG4jID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxucXBsb3QobXRjYXJzJG1wZylcblxuXG4jID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PVxubGlicmFyeShnZ3Bsb3QyKVxucXBsb3QobXBnLCBkYXRhPW10Y2FycywgYmlud2lkdGg9NClcbiMgVGhpcyBpcyBlcXVpdmFsZW50IHRvOlxuZ2dwbG90KG10Y2FycywgYWVzKHg9bXBnKSkgKyBnZW9tX2hpc3RvZ3JhbShiaW53aWR0aD00KVxuYGBgIn0= -->
+<pre class="r"><code># ====================================
+hist(mtcars$mpg)
+
+# Specify approximate number of bins with breaks
+hist(mtcars$mpg, breaks=10)
+
+
+# ====================================
+qplot(mtcars$mpg)
+
+
+# ====================================
+library(ggplot2)
+qplot(mpg, data=mtcars, binwidth=4)
+# This is equivalent to:
+ggplot(mtcars, aes(x=mpg)) + geom_histogram(binwidth=4)</code></pre>
+<!-- rnb-source-end -->
+<!-- rnb-chunk-end -->
+<!-- rnb-text-begin -->
+<ul>
+<li>See Also</li>
+</ul>
 </div>
-<div id="bar-graph-of-counts" class="section level1">
-<h1>Bar graph of counts</h1>
-<p>qplot(factor(cyl), data=mtcars) # This is equivalent to: ggplot(mtcars, aes(x=factor(cyl))) + geom_bar()</p>
-<p>==================================== hist(mtcars$mpg)</p>
+<div id="creating-a-box-plot" class="section level2">
+<h2>2.5. Creating a Box Plot</h2>
+<ul>
+<li><p>Problem</p></li>
+<li><p>Solution</p></li>
+<li><p>See Also</p></li>
+</ul>
 </div>
-<div id="specify-approximate-number-of-bins-with-breaks" class="section level1">
-<h1>Specify approximate number of bins with breaks</h1>
-<p>hist(mtcars$mpg, breaks=10)</p>
-<p>==================================== qplot(mtcars$mpg)</p>
-<p>==================================== library(ggplot2) qplot(mpg, data=mtcars, binwidth=4) # This is equivalent to: ggplot(mtcars, aes(x=mpg)) + geom_histogram(binwidth=4)</p>
-<p>==================================== plot(ToothGrowth<span class="math inline">\(supp, ToothGrowth\)</span>len)</p>
-<p>==================================== # Formula syntax boxplot(len ~ supp, data = ToothGrowth)</p>
-</div>
-<div id="put-interaction-of-two-variables-on-x-axis" class="section level1">
-<h1>Put interaction of two variables on x-axis</h1>
-<p>boxplot(len ~ supp + dose, data = ToothGrowth)</p>
-<p>==================================== library(ggplot2) qplot(ToothGrowth<span class="math inline">\(supp, ToothGrowth\)</span>len, geom=“boxplot”)</p>
-<p>==================================== qplot(supp, len, data=ToothGrowth, geom=“boxplot”) # This is equivalent to: ggplot(ToothGrowth, aes(x=supp, y=len)) + geom_boxplot()</p>
-<p>==================================== # Using three separate vectors qplot(interaction(ToothGrowth<span class="math inline">\(supp, ToothGrowth\)</span>dose), ToothGrowth$len, geom=“boxplot”)</p>
-</div>
-<div id="alternatively-get-the-columns-from-the-data-frame" class="section level1">
-<h1>Alternatively, get the columns from the data frame</h1>
-<p>qplot(interaction(supp, dose), len, data=ToothGrowth, geom=“boxplot”) # This is equivalent to: ggplot(ToothGrowth, aes(x=interaction(supp, dose), y=len)) + geom_boxplot()</p>
-<p>==================================== curve(x^3 - 5*x, from=-4, to=4)</p>
-<p>==================================== # Plot a user-defined function myfun &lt;- function(xvar) { 1/(1 + exp(-xvar + 10)) } curve(myfun(x), from=0, to=20) # Add a line: curve(1-myfun(x), add = TRUE, col = “red”)</p>
-<p>==================================== library(ggplot2) # This sets the x range from 0 to 20 qplot(c(0,20), fun=myfun, stat=“function”, geom=“line”) # This is equivalent to: ggplot(data.frame(x=c(0, 20)), aes(x=x)) + stat_function(fun=myfun, geom=“line”)</p>
-<p>==================</p>
+<div id="plotting-a-function-curve" class="section level2">
+<h2>2.6. Plotting a Function Curve</h2>
+<ul>
+<li><p>Problem</p></li>
+<li><p>Solution</p></li>
+<li><p>See Also</p></li>
+</ul>
 <!-- rnb-text-end -->
 </div>
 
-<div id="rmd-source-code">LS0tDQp0aXRsZTogImNoYXB0ZXIyOiBRdWlja2x5IEV4cGxvcmluZyBEYXRhIg0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KIyMgMi4xLiBDcmVhdGluZyBhIFNjYXR0ZXIgUGxvdA0KYGBge3J9DQpwbG90KG10Y2FycyR3dCwgbXRjYXJzJG1wZykNCmBgYCAgICANCiAgICANCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KbGlicmFyeShnZ3Bsb3QyKQ0KcXBsb3QobXRjYXJzJHd0LCBtdGNhcnMkbXBnKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpxcGxvdCh3dCwgbXBnLCBkYXRhPW10Y2FycykNCiMgVGhpcyBpcyBlcXVpdmFsZW50IHRvOg0KZ2dwbG90KG10Y2FycywgYWVzKHg9d3QsIHk9bXBnKSkgKyBnZW9tX3BvaW50KCkNCiAgICANCiAgICANCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KcGxvdChwcmVzc3VyZSR0ZW1wZXJhdHVyZSwgcHJlc3N1cmUkcHJlc3N1cmUsIHR5cGU9ImwiKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpwbG90KHByZXNzdXJlJHRlbXBlcmF0dXJlLCBwcmVzc3VyZSRwcmVzc3VyZSwgdHlwZT0ibCIpDQpwb2ludHMocHJlc3N1cmUkdGVtcGVyYXR1cmUsIHByZXNzdXJlJHByZXNzdXJlKQ0KDQpsaW5lcyhwcmVzc3VyZSR0ZW1wZXJhdHVyZSwgcHJlc3N1cmUkcHJlc3N1cmUvMiwgY29sPSJyZWQiKQ0KcG9pbnRzKHByZXNzdXJlJHRlbXBlcmF0dXJlLCBwcmVzc3VyZSRwcmVzc3VyZS8yLCBjb2w9InJlZCIpDQogICAgDQogICAgDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCmxpYnJhcnkoZ2dwbG90MikNCnFwbG90KHByZXNzdXJlJHRlbXBlcmF0dXJlLCBwcmVzc3VyZSRwcmVzc3VyZSwgZ2VvbT0ibGluZSIpDQogICAgDQogICAgDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCnFwbG90KHRlbXBlcmF0dXJlLCBwcmVzc3VyZSwgZGF0YT1wcmVzc3VyZSwgZ2VvbT0ibGluZSIpDQojIFRoaXMgaXMgZXF1aXZhbGVudCB0bzoNCmdncGxvdChwcmVzc3VyZSwgYWVzKHg9dGVtcGVyYXR1cmUsIHk9cHJlc3N1cmUpKSArIGdlb21fbGluZSgpDQoNCg0KIyBMaW5lcyBhbmQgcG9pbnRzIHRvZ2V0aGVyDQpxcGxvdCh0ZW1wZXJhdHVyZSwgcHJlc3N1cmUsIGRhdGE9cHJlc3N1cmUsIGdlb209YygibGluZSIsICJwb2ludCIpKQ0KIyBFcXVpdmFsZW50IHRvOg0KZ2dwbG90KHByZXNzdXJlLCBhZXMoeD10ZW1wZXJhdHVyZSwgeT1wcmVzc3VyZSkpICsgZ2VvbV9saW5lKCkgKyBnZW9tX3BvaW50KCkNCiAgICANCiAgICANCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KYmFycGxvdChCT0QkZGVtYW5kLCBuYW1lcy5hcmc9Qk9EJFRpbWUpDQogICAgDQogICAgDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCnRhYmxlKG10Y2FycyRjeWwpDQoNCiA0ICA2ICA4DQoxMSAgNyAxNA0KIyBUaGVyZSBhcmUgMTEgY2FzZXMgb2YgdGhlIHZhbHVlIDQsIDcgY2FzZXMgb2YgNiwgYW5kIDE0IGNhc2VzIG9mIDgNCg0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQojIEdlbmVyYXRlIGEgdGFibGUgb2YgY291bnRzDQpiYXJwbG90KHRhYmxlKG10Y2FycyRjeWwpKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpsaWJyYXJ5KGdncGxvdDIpDQpxcGxvdChCT0QkVGltZSwgQk9EJGRlbWFuZCwgZ2VvbT0iYmFyIiwgc3RhdD0iaWRlbnRpdHkiKQ0KDQojIENvbnZlcnQgdGhlIHggdmFyaWFibGUgdG8gYSBmYWN0b3IsIHNvIHRoYXQgaXQgaXMgdHJlYXRlZCBhcyBkaXNjcmV0ZQ0KcXBsb3QoZmFjdG9yKEJPRCRUaW1lKSwgQk9EJGRlbWFuZCwgZ2VvbT0iYmFyIiwgc3RhdD0iaWRlbnRpdHkiKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQojIGN5bCBpcyBjb250aW51b3VzIGhlcmUNCnFwbG90KG10Y2FycyRjeWwpDQoNCiMgVHJlYXQgY3lsIGFzIGRpc2NyZXRlDQpxcGxvdChmYWN0b3IobXRjYXJzJGN5bCkpDQogICAgDQogICAgDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCiMgQmFyIGdyYXBoIG9mIHZhbHVlcy4gVGhpcyB1c2VzIHRoZSBCT0QgZGF0YSBmcmFtZSwgd2l0aCB0aGUgDQojIlRpbWUiIGNvbHVtbiBmb3IgeCB2YWx1ZXMgYW5kIHRoZSAiZGVtYW5kIiBjb2x1bW4gZm9yIHkgdmFsdWVzLg0KcXBsb3QoVGltZSwgZGVtYW5kLCBkYXRhPUJPRCwgZ2VvbT0iYmFyIiwgc3RhdD0iaWRlbnRpdHkiKQ0KIyBUaGlzIGlzIGVxdWl2YWxlbnQgdG86DQpnZ3Bsb3QoQk9ELCBhZXMoeD1UaW1lLCB5PWRlbWFuZCkpICsgZ2VvbV9iYXIoc3RhdD0iaWRlbnRpdHkiKQ0KDQoNCiMgQmFyIGdyYXBoIG9mIGNvdW50cw0KcXBsb3QoZmFjdG9yKGN5bCksIGRhdGE9bXRjYXJzKQ0KIyBUaGlzIGlzIGVxdWl2YWxlbnQgdG86DQpnZ3Bsb3QobXRjYXJzLCBhZXMoeD1mYWN0b3IoY3lsKSkpICsgZ2VvbV9iYXIoKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpoaXN0KG10Y2FycyRtcGcpDQoNCiMgU3BlY2lmeSBhcHByb3hpbWF0ZSBudW1iZXIgb2YgYmlucyB3aXRoIGJyZWFrcw0KaGlzdChtdGNhcnMkbXBnLCBicmVha3M9MTApDQogICAgDQogICAgDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCnFwbG90KG10Y2FycyRtcGcpDQogICAgDQogICAgDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCmxpYnJhcnkoZ2dwbG90MikNCnFwbG90KG1wZywgZGF0YT1tdGNhcnMsIGJpbndpZHRoPTQpDQojIFRoaXMgaXMgZXF1aXZhbGVudCB0bzoNCmdncGxvdChtdGNhcnMsIGFlcyh4PW1wZykpICsgZ2VvbV9oaXN0b2dyYW0oYmlud2lkdGg9NCkNCiAgICANCiAgICANCj09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KcGxvdChUb290aEdyb3d0aCRzdXBwLCBUb290aEdyb3d0aCRsZW4pDQogICAgDQogICAgDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCiMgRm9ybXVsYSBzeW50YXgNCmJveHBsb3QobGVuIH4gc3VwcCwgZGF0YSA9IFRvb3RoR3Jvd3RoKQ0KDQojIFB1dCBpbnRlcmFjdGlvbiBvZiB0d28gdmFyaWFibGVzIG9uIHgtYXhpcw0KYm94cGxvdChsZW4gfiBzdXBwICsgZG9zZSwgZGF0YSA9IFRvb3RoR3Jvd3RoKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpsaWJyYXJ5KGdncGxvdDIpDQpxcGxvdChUb290aEdyb3d0aCRzdXBwLCBUb290aEdyb3d0aCRsZW4sIGdlb209ImJveHBsb3QiKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpxcGxvdChzdXBwLCBsZW4sIGRhdGE9VG9vdGhHcm93dGgsIGdlb209ImJveHBsb3QiKQ0KIyBUaGlzIGlzIGVxdWl2YWxlbnQgdG86DQpnZ3Bsb3QoVG9vdGhHcm93dGgsIGFlcyh4PXN1cHAsIHk9bGVuKSkgKyBnZW9tX2JveHBsb3QoKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQojIFVzaW5nIHRocmVlIHNlcGFyYXRlIHZlY3RvcnMNCnFwbG90KGludGVyYWN0aW9uKFRvb3RoR3Jvd3RoJHN1cHAsIFRvb3RoR3Jvd3RoJGRvc2UpLCBUb290aEdyb3d0aCRsZW4sDQogICAgICBnZW9tPSJib3hwbG90IikNCg0KIyBBbHRlcm5hdGl2ZWx5LCBnZXQgdGhlIGNvbHVtbnMgZnJvbSB0aGUgZGF0YSBmcmFtZQ0KcXBsb3QoaW50ZXJhY3Rpb24oc3VwcCwgZG9zZSksIGxlbiwgZGF0YT1Ub290aEdyb3d0aCwgZ2VvbT0iYm94cGxvdCIpDQojIFRoaXMgaXMgZXF1aXZhbGVudCB0bzoNCmdncGxvdChUb290aEdyb3d0aCwgYWVzKHg9aW50ZXJhY3Rpb24oc3VwcCwgZG9zZSksIHk9bGVuKSkgKyBnZW9tX2JveHBsb3QoKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpjdXJ2ZSh4XjMgLSA1KngsIGZyb209LTQsIHRvPTQpDQogICAgDQogICAgDQo9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCiMgUGxvdCBhIHVzZXItZGVmaW5lZCBmdW5jdGlvbg0KbXlmdW4gPC0gZnVuY3Rpb24oeHZhcikgew0KICAgIDEvKDEgKyBleHAoLXh2YXIgKyAxMCkpDQp9DQpjdXJ2ZShteWZ1bih4KSwgZnJvbT0wLCB0bz0yMCkNCiMgQWRkIGEgbGluZToNCmN1cnZlKDEtbXlmdW4oeCksIGFkZCA9IFRSVUUsIGNvbCA9ICJyZWQiKQ0KICAgIA0KICAgIA0KPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpsaWJyYXJ5KGdncGxvdDIpDQojIFRoaXMgc2V0cyB0aGUgeCByYW5nZSBmcm9tIDAgdG8gMjANCnFwbG90KGMoMCwyMCksIGZ1bj1teWZ1biwgc3RhdD0iZnVuY3Rpb24iLCBnZW9tPSJsaW5lIikNCiMgVGhpcyBpcyBlcXVpdmFsZW50IHRvOg0KZ2dwbG90KGRhdGEuZnJhbWUoeD1jKDAsIDIwKSksIGFlcyh4PXgpKSArIHN0YXRfZnVuY3Rpb24oZnVuPW15ZnVuLCBnZW9tPSJsaW5lIikNCiAgICANCiAgICANCj09PT09PT09PT09PT09PT09PQ==</div>
+<div id="rmd-source-code">LS0tDQp0aXRsZTogJ2NoYXB0ZXIyOiBRdWlja2x5IEV4cGxvcmluZyBEYXRhJw0Kb3V0cHV0OiBodG1sX25vdGVib29rDQotLS0NCg0KPCEtLSB0b2Mgb3JkZXJlZExpc3Q6MCBkZXB0aEZyb206MSBkZXB0aFRvOjYgLS0+DQoNCi0gWzIuMS4gQ3JlYXRpbmcgYSBTY2F0dGVyIFBsb3RdKCMyMS1jcmVhdGluZy1hLXNjYXR0ZXItcGxvdCkNCi0gWzIuMi4gQ3JlYXRpbmcgYSBMaW5lIEdyYXBoXSgjMjItY3JlYXRpbmctYS1saW5lLWdyYXBoKQ0KLSBbMi4zLiBDcmVhdGluZyBhIEJhciBHcmFwaF0oIzIzLWNyZWF0aW5nLWEtYmFyLWdyYXBoKQ0KLSBbMi40LiBDcmVhdGluZyBhIEhpc3RvZ3JhbV0oIzI0LWNyZWF0aW5nLWEtaGlzdG9ncmFtKQ0KLSBbMi41LiBDcmVhdGluZyBhIEJveCBQbG90XSgjMjUtY3JlYXRpbmctYS1ib3gtcGxvdCkNCi0gWzIuNi4gUGxvdHRpbmcgYSBGdW5jdGlvbiBDdXJ2ZV0oIzI2LXBsb3R0aW5nLWEtZnVuY3Rpb24tY3VydmUpDQoNCjwhLS0gdG9jc3RvcCAtLT4NCg0KIyMgMi4xLiBDcmVhdGluZyBhIFNjYXR0ZXIgUGxvdA0KICAqIFByb2JsZW0gIA0KICAgIFlvdSB3YW50IHRvIGNyZWF0ZSBhIHNjYXR0ZXIgcGxvdC4gIA0KDQogICogU29sdXRpb24gIA0KYGBge3J9ICANCnBsb3QobXRjYXJzJHd0LCBtdGNhcnMkbXBnKQ0KYGBgDQoNCg0KYGBge3J9DQpsaWJyYXJ5KGdncGxvdDIpDQpxcGxvdChtdGNhcnMkd3QsIG10Y2FycyRtcGcpDQpgYGANCg0KYGBge3J9ICAgIA0KcXBsb3Qod3QsIG1wZywgZGF0YT1tdGNhcnMpDQojIFRoaXMgaXMgZXF1aXZhbGVudCB0bzoNCmdncGxvdChtdGNhcnMsIGFlcyh4PXd0LCB5PW1wZykpICsgZ2VvbV9wb2ludCgpDQpgYGAgIA0KICAqIFNlZSBBbHNvICANCg0KIyMgMi4yLiBDcmVhdGluZyBhIExpbmUgR3JhcGgNCiAgKiBQcm9ibGVtICANCiAgICBZb3Ugd2FudCB0byBjcmVhdGUgYSBsaW5lIGdyYXBoLiAgDQoNCiAgKiBTb2x1dGlvbiAgDQpgYGB7cn0NCiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpwbG90KHByZXNzdXJlJHRlbXBlcmF0dXJlLCBwcmVzc3VyZSRwcmVzc3VyZSwgdHlwZT0ibCIpDQoNCg0KIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCnBsb3QocHJlc3N1cmUkdGVtcGVyYXR1cmUsIHByZXNzdXJlJHByZXNzdXJlLCB0eXBlPSJsIikNCnBvaW50cyhwcmVzc3VyZSR0ZW1wZXJhdHVyZSwgcHJlc3N1cmUkcHJlc3N1cmUpDQoNCmxpbmVzKHByZXNzdXJlJHRlbXBlcmF0dXJlLCBwcmVzc3VyZSRwcmVzc3VyZS8yLCBjb2w9InJlZCIpDQpwb2ludHMocHJlc3N1cmUkdGVtcGVyYXR1cmUsIHByZXNzdXJlJHByZXNzdXJlLzIsIGNvbD0icmVkIikNCg0KDQojID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KbGlicmFyeShnZ3Bsb3QyKQ0KcXBsb3QocHJlc3N1cmUkdGVtcGVyYXR1cmUsIHByZXNzdXJlJHByZXNzdXJlLCBnZW9tPSJsaW5lIikNCg0KIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCnFwbG90KHRlbXBlcmF0dXJlLCBwcmVzc3VyZSwgZGF0YT1wcmVzc3VyZSwgZ2VvbT0ibGluZSIpDQoNCiMgVGhpcyBpcyBlcXVpdmFsZW50IHRvOg0KZ2dwbG90KHByZXNzdXJlLCBhZXMoeD10ZW1wZXJhdHVyZSwgeT1wcmVzc3VyZSkpICsgZ2VvbV9saW5lKCkNCg0KIyBMaW5lcyBhbmQgcG9pbnRzIHRvZ2V0aGVyDQpxcGxvdCh0ZW1wZXJhdHVyZSwgcHJlc3N1cmUsIGRhdGE9cHJlc3N1cmUsIGdlb209YygibGluZSIsICJwb2ludCIpKQ0KDQojIEVxdWl2YWxlbnQgdG86DQpnZ3Bsb3QocHJlc3N1cmUsIGFlcyh4PXRlbXBlcmF0dXJlLCB5PXByZXNzdXJlKSkgKyBnZW9tX2xpbmUoKSArIGdlb21fcG9pbnQoKQ0KDQpgYGANCiAgKiBTZWUgQWxzbyAgDQoNCiMjIDIuMy4gQ3JlYXRpbmcgYSBCYXIgR3JhcGgNCiAgKiBQcm9ibGVtICANCiAgICBZb3Ugd2FudCB0byBtYWtlIGEgYmFyIGdyYXBoLiAgDQoNCiAgKiBTb2x1dGlvbiAgDQpgYGB7cn0NCiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpiYXJwbG90KEJPRCRkZW1hbmQsIG5hbWVzLmFyZz1CT0QkVGltZSkNCg0KDQojID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KdGFibGUobXRjYXJzJGN5bCkNCg0KIDQgIDYgIDgNCjExICA3IDE0DQojIFRoZXJlIGFyZSAxMSBjYXNlcyBvZiB0aGUgdmFsdWUgNCwgNyBjYXNlcyBvZiA2LCBhbmQgMTQgY2FzZXMgb2YgOA0KDQoNCg0KIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCiMgR2VuZXJhdGUgYSB0YWJsZSBvZiBjb3VudHMNCmJhcnBsb3QodGFibGUobXRjYXJzJGN5bCkpDQoNCg0KIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCmxpYnJhcnkoZ2dwbG90MikNCnFwbG90KEJPRCRUaW1lLCBCT0QkZGVtYW5kLCBnZW9tPSJiYXIiLCBzdGF0PSJpZGVudGl0eSIpDQoNCiMgQ29udmVydCB0aGUgeCB2YXJpYWJsZSB0byBhIGZhY3Rvciwgc28gdGhhdCBpdCBpcyB0cmVhdGVkIGFzIGRpc2NyZXRlDQpxcGxvdChmYWN0b3IoQk9EJFRpbWUpLCBCT0QkZGVtYW5kLCBnZW9tPSJiYXIiLCBzdGF0PSJpZGVudGl0eSIpDQoNCg0KIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCiMgY3lsIGlzIGNvbnRpbnVvdXMgaGVyZQ0KcXBsb3QobXRjYXJzJGN5bCkNCg0KIyBUcmVhdCBjeWwgYXMgZGlzY3JldGUNCnFwbG90KGZhY3RvcihtdGNhcnMkY3lsKSkNCg0KDQojID09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PQ0KIyBCYXIgZ3JhcGggb2YgdmFsdWVzLiBUaGlzIHVzZXMgdGhlIEJPRCBkYXRhIGZyYW1lLCB3aXRoIHRoZQ0KIyJUaW1lIiBjb2x1bW4gZm9yIHggdmFsdWVzIGFuZCB0aGUgImRlbWFuZCIgY29sdW1uIGZvciB5IHZhbHVlcy4NCnFwbG90KFRpbWUsIGRlbWFuZCwgZGF0YT1CT0QsIGdlb209ImJhciIsIHN0YXQ9ImlkZW50aXR5IikNCiMgVGhpcyBpcyBlcXVpdmFsZW50IHRvOg0KZ2dwbG90KEJPRCwgYWVzKHg9VGltZSwgeT1kZW1hbmQpKSArIGdlb21fYmFyKHN0YXQ9ImlkZW50aXR5IikNCg0KDQojIEJhciBncmFwaCBvZiBjb3VudHMNCnFwbG90KGZhY3RvcihjeWwpLCBkYXRhPW10Y2FycykNCiMgVGhpcyBpcyBlcXVpdmFsZW50IHRvOg0KZ2dwbG90KG10Y2FycywgYWVzKHg9ZmFjdG9yKGN5bCkpKSArIGdlb21fYmFyKCkNCmBgYA0KICAqIFNlZSBBbHNvICANCg0KIyMgMi40LiBDcmVhdGluZyBhIEhpc3RvZ3JhbQ0KICAqIFByb2JsZW0gIA0KICAgIFlvdSB3YW50IHRvIHZpZXcgdGhlIGRpc3RyaWJ1dGlvbiBvZiBvbmUtZGltZW5zaW9uYWwgZGF0YSB3aXRoIGEgaGlzdG9ncmFtLiAgDQoNCiAgKiBTb2x1dGlvbiAgDQpgYGB7cn0NCiMgPT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09DQpoaXN0KG10Y2FycyRtcGcpDQoNCiMgU3BlY2lmeSBhcHByb3hpbWF0ZSBudW1iZXIgb2YgYmlucyB3aXRoIGJyZWFrcw0KaGlzdChtdGNhcnMkbXBnLCBicmVha3M9MTApDQoNCg0KIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCnFwbG90KG10Y2FycyRtcGcpDQoNCg0KIyA9PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT09PT0NCmxpYnJhcnkoZ2dwbG90MikNCnFwbG90KG1wZywgZGF0YT1tdGNhcnMsIGJpbndpZHRoPTQpDQojIFRoaXMgaXMgZXF1aXZhbGVudCB0bzoNCmdncGxvdChtdGNhcnMsIGFlcyh4PW1wZykpICsgZ2VvbV9oaXN0b2dyYW0oYmlud2lkdGg9NCkNCmBgYA0KICAqIFNlZSBBbHNvICANCg0KIyMgMi41LiBDcmVhdGluZyBhIEJveCBQbG90DQogICogUHJvYmxlbSAgDQoNCiAgKiBTb2x1dGlvbiAgDQoNCiAgKiBTZWUgQWxzbyAgDQoNCiMjIDIuNi4gUGxvdHRpbmcgYSBGdW5jdGlvbiBDdXJ2ZQ0KICAqIFByb2JsZW0gIA0KDQogICogU29sdXRpb24gIA0KDQogICogU2VlIEFsc28gIA0K</div>
 
 
 

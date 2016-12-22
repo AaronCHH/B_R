@@ -1,0 +1,132 @@
+# Chapter 3. Bar Graphs
+
+<!-- toc orderedList:0 depthFrom:1 depthTo:6 -->
+
+- [Chapter 3. Bar Graphs](#chapter-3-bar-graphs)
+	- [3.1. Making a Basic Bar Graph](#31-making-a-basic-bar-graph)
+	- [3.2. Grouping Bars Together](#32-grouping-bars-together)
+	- [3.3. Making a Bar Graph of Counts](#33-making-a-bar-graph-of-counts)
+	- [3.4. Using Colors in a Bar Graph](#34-using-colors-in-a-bar-graph)
+	- [3.5. Coloring Negative and Positive Bars Differently](#35-coloring-negative-and-positive-bars-differently)
+	- [3.6. Adjusting Bar Width and Spacing](#36-adjusting-bar-width-and-spacing)
+	- [3.7. Making a Stacked Bar Graph](#37-making-a-stacked-bar-graph)
+	- [3.8. Making a Proportional Stacked Bar Graph](#38-making-a-proportional-stacked-bar-graph)
+	- [3.9. Adding Labels to a Bar Graph](#39-adding-labels-to-a-bar-graph)
+	- [3.10. Making a Cleveland Dot Plot](#310-making-a-cleveland-dot-plot)
+
+<!-- tocstop -->
+
+## 3.1. Making a Basic Bar Graph
+  * Problem  
+You have a data frame where one column represents the x position of each bar, and
+another column represents the vertical (y) height of each bar.  
+
+  * Solution  
+    ```{R}
+    library(gcookbook) # For the data set
+    ggplot(pg_mean, aes(x=group, y=weight)) + geom_bar(stat="identity")
+    ```
+
+  * Discussion  
+    ```{r}
+    # There's no entry for Time == 6
+    BOD
+
+     Time demand
+        1    8.3
+        2   10.3
+        3   19.0
+        4   16.0
+        5   15.6
+        7   19.8
+
+    # Time is numeric (continuous)
+    str(BOD)
+
+    'data.frame':   6 obs. of  2 variables:
+     $ Time  : num  1 2 3 4 5 7
+     $ demand: num  8.3 10.3 19 16 15.6 19.8
+     - attr(*, "reference")= chr "A1.4, p. 270"
+    ```
+
+  * See Also  
+
+## 3.2. Grouping Bars Together
+  * Problem  
+    You want to group bars together by a second variable.  
+
+  * Solution  
+
+  * Discussion  
+
+  * See Also  
+
+## 3.3. Making a Bar Graph of Counts
+  * Problem  
+
+  * Solution  
+
+  * Discussion  
+
+  * See Also  
+
+## 3.4. Using Colors in a Bar Graph
+  * Problem  
+
+  * Solution  
+
+  * Discussion  
+
+  * See Also  
+
+## 3.5. Coloring Negative and Positive Bars Differently
+  * Problem  
+
+  * Solution  
+
+  * Discussion  
+
+  * See Also  
+
+## 3.6. Adjusting Bar Width and Spacing
+  * Problem  
+
+  * Solution  
+
+  * Discussion  
+
+## 3.7. Making a Stacked Bar Graph
+  * Problem  
+
+  * Solution  
+
+  * Discussion  
+
+  * See Also  
+
+## 3.8. Making a Proportional Stacked Bar Graph
+  * Problem  
+
+  * Solution  
+
+  * Discussion  
+
+  * See Also  
+
+## 3.9. Adding Labels to a Bar Graph
+  * Problem  
+
+  * Solution  
+
+  * Discussion  
+
+  * See Also  
+
+## 3.10. Making a Cleveland Dot Plot
+  * Problem  
+
+  * Solution  
+
+  * Discussion  
+
+  * See Also  
