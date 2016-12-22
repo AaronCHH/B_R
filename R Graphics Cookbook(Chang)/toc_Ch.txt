@@ -1,0 +1,15 @@
+1. R Basics
+2. Quickly Exploring Data
+3. Bar Graphs
+4. Line Graphs
+5. Scatter Plots
+6. Summarized Data Distributions
+7. Annotations
+8. Axes
+9. Controlling the Overall Appearance of Graphs 
+10. Legends
+11. Facets
+12. Using Colors in Plots
+13. Miscellaneous Graphs
+14. Output for Presentation
+15. Getting Your Data into Shape		.
