@@ -5,20 +5,20 @@
 [O'reilly](http://shop.oreilly.com/product/0636920023135.do)
 
 ## Toc
-* **[Chapter 1. R Basics](Ch01_R_Basics.Rmd)**  
+* **[Chapter 1. R Basics](Ch01_R_Basics.Rmd)**
   * 1.1. Installing a Package  
   * 1.2. Loading a Package  
   * 1.3. Loading a Delimited Text Data File  
   * 1.4. Loading Data from an Excel File  
   * 1.5. Loading Data from an SPSS File  
-* **Chapter 2. Quickly Exploring Data**  
+* **[Chapter 2. Quickly Exploring Data](Ch02_Quickly_Exploring_Data.Rmd)**
   * 2.1. Creating a Scatter Plot  
   * 2.2. Creating a Line Graph  
   * 2.3. Creating a Bar Graph  
   * 2.4. Creating a Histogram  
   * 2.5. Creating a Box Plot  
   * 2.6. Plotting a Function Curve  
-* **Chapter 3. Bar Graphs**  
+* **[Chapter 3. Bar Graphs](Ch03_Bar_Graphs.Rmd)**
   * 3.1. Making a Basic Bar Graph  
   * 3.2. Grouping Bars Together  
   * 3.3. Making a Bar Graph of Counts  
@@ -29,7 +29,7 @@
   * 3.8. Making a Proportional Stacked Bar Graph  
   * 3.9. Adding Labels to a Bar Graph  
   * 3.10. Making a Cleveland Dot Plot  
-* **Chapter 4. Line Graphs**  
+* **[Chapter 4. Line Graphs](Ch04_Line_Graphs.Rmd)**
   * 4.1. Making a Basic Line Graph  
   * 4.2. Adding Points to a Line Graph  
   * 4.3. Making a Line Graph with Multiple Lines  
@@ -39,7 +39,7 @@
   * 4.7. Making a Stacked Area Graph  
   * 4.8. Making a Proportional Stacked Area Graph  
   * 4.9. Adding a Confidence Region  
-* **Chapter 5. Scatter Plots**  
+* **[Chapter 5. Scatter Plots](Ch05_Scatter_Plots.Rmd)**
   * 5.1. Making a Basic Scatter Plot  
   * 5.2. Grouping Data Points by a Variable Using Shape or Color  
   * 5.3. Using Different Point Shapes  
@@ -53,7 +53,7 @@
   * 5.11. Labeling Points in a Scatter Plot  
   * 5.12. Creating a Balloon Plot  
   * 5.13. Making a Scatter Plot Matrix  
-* **Chapter 6. Summarized Data Distributions**  
+* **[Chapter 6. Summarized Data Distributions](Ch06_Summarized_Data_Distributions.Rmd)**
   * 6.1. Making a Basic Histogram  
   * 6.2. Making Multiple Histograms from Grouped Data  
   * 6.3. Making a Density Curve  
@@ -66,7 +66,7 @@
   * 6.10. Making a Dot Plot  
   * 6.11. Making Multiple Dot Plots for Grouped Data  
   * 6.12. Making a Density Plot of Two-Dimensional Data  
-* **Chapter 7. Annotations**  
+* **[Chapter 7. Annotations](Ch07_Annotations.Rmd)**
   * 7.1. Adding Text Annotations  
   * 7.2. Using Mathematical Expressions in Annotations  
   * 7.3. Adding Lines  
@@ -75,7 +75,7 @@
   * 7.6. Highlighting an Item  
   * 7.7. Adding Error Bars  
   * 7.8. Adding Annotations to Individual Facets  
-* **Chapter 8. Axes**  
+* **[Chapter 8. Axes](Ch08_Axes.Rmd)**
   * 8.1. Swapping X- and Y-Axes  
   * 8.2. Setting the Range of a Continuous Axis  
   * 8.3. Reversing a Continuous Axis  
@@ -94,14 +94,14 @@
   * 8.16. Making a Circular Graph  
   * 8.17. Using Dates on an Axis  
   * 8.18. Using Relative Times on an Axis  
-* **Chapter 9. Controlling the Overall Appearance of Graphs**  
+* **[Chapter 9. Controlling the Overall Appearance of Graphs](Ch09_Controlling_the_Overall_Appearance_of_Graphs.Rmd)**
   * 9.1. Setting the Title of a Graph  
   * 9.2. Changing the Appearance of Text  
   * 9.3. Using Themes  
   * 9.4. Changing the Appearance of Theme Elements  
   * 9.5. Creating Your Own Themes  
   * 9.6. Hiding Grid Lines  
-* **Chapter 10. Legends**  
+* **[Chapter 10. Legends](Ch10_Legends.Rmd)**
   * 10.1. Removing the Legend  
   * 10.2. Changing the Position of a Legend  
   * 10.3. Changing the Order of Items in a Legend  
@@ -112,12 +112,12 @@
   * 10.8. Changing the Labels in a Legend  
   * 10.9. Changing the Appearance of Legend Labels  
   * 10.10. Using Labels with Multiple Lines of Text  
-* **Chapter 11. Facets**  
+* **[Chapter 11. Facets](Ch11_Facets.Rmd)**
   * 11.1. Splitting Data into Subplots with Facets  
   * 11.2. Using Facets with Different Axes  
   * 11.3. Changing the Text of Facet Labels  
   * 11.4. Changing the Appearance of Facet Labels and Headers  
-* **Chapter 12. Using Colors in Plots**  
+* **[Chapter 12. Using Colors in Plots](Ch12_Using_Colors_in_Plots.Rmd)**
   * 12.1. Setting the Colors of Objects  
   * 12.2. Mapping Variables to Colors  
   * 12.3. Using a Different Palette for a Discrete Variable  
@@ -125,7 +125,7 @@
   * 12.5. Using a Colorblind-Friendly Palette  
   * 12.6. Using a Manually Defined Palette for a Continuous Variable  
   * 12.7. Coloring a Shaded Region Based on Value  
-* **Chapter 13. Miscellaneous Graphs**  
+* **[Chapter 13. Miscellaneous Graphs](Ch13_Miscellaneous_Graphs.Rmd)**
   * 13.1. Making a Correlation Matrix  
   * 13.2. Plotting a Function  
   * 13.3. Shading a Subregion Under a Function Curve  
@@ -146,7 +146,7 @@
   * 13.18. Creating a Choropleth Map  
   * 13.19. Making a Map with a Clean Background  
   * 13.20. Creating a Map from a Shapefile  
-* **Chapter 14. Output for Presentation**  
+* **[Chapter 14. Output for Presentation](Ch14_Output_for_Presentation.Rmd)**
   * 14.1. Outputting to PDF Vector Files  
   * 14.2. Outputting to SVG Vector Files  
   * 14.3. Outputting to WMF Vector Files  
@@ -154,7 +154,7 @@
   * 14.5. Outputting to Bitmap (PNG/TIFF) Files  
   * 14.6. Using Fonts in PDF Files  
   * 14.7. Using Fonts in Windows Bitmap or Screen Output  
-* **Chapter 15. Getting Your Data into Shape**  
+* **[Chapter 15. Getting Your Data into Shape](Ch15_Getting_Your_Data_into_Shape.Rmd)**
   * 15.1. Creating a Data Frame  
   * 15.2. Getting Information About a Data Structure  
   * 15.3. Adding a Column to a Data Frame  
