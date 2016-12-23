@@ -15,32 +15,34 @@ output: html_notebook
 <!-- tocstop -->
 
 ## 1.1. Installing a Package
-  * Problem  
+  * **Problem**  
     You want to install a package from CRAN.  
 
-  * Solution  
+  * **Solution**  
 ```{r}  
     install.packages("ggplot2" )  
 ```
-  * Discussion  
+  * **Discussion**  
 
 ## 1.2. Loading a Package
-  * Problem  
+  * **Problem**  
     You want to load an installed package.  
 
-  * Solution ```{R}
-library(ggplot2```  
-  * Discussion  
+  * **Solutio**n 
+```{R}
+library(ggplot2
+```  
+  * **Discussion**  
 
 ## 1.3. Loading a Delimited Text Data File
-  * Problem  
+  * **Problem**  
     You want to load data from a delimited text file.  
 
-  * Solution  
+  * **Solution**  
 ```{r}
     data <-  read.csv("datafile.csv" )
 ```
-  * Discussion  
+  * **Discussion**  
 ```{R}
 # ====================================
 data <- read.csv("datafile.csv", header=FALSE)
@@ -58,13 +60,13 @@ data <- read.csv("datafile.csv", stringsAsFactors=FALSE)
 data$Sex <- factor(data$Sex)
 str(data)
 ```  
-  * See Also  
+  * **See Also**  
 
 ## 1.4. Loading Data from an Excel File
-  * Problem  
+  * **Problem**  
     You want to load data from an Excel file.  
 
-  * Solution  
+  * **Solution**  
 ```{r}
 # Only need to install once
 install.packages("xlsx")
@@ -81,7 +83,7 @@ library(gdata)
 data <- read.xls("datafile.xls")
 ```  
 
-  * Discussion  
+  * **Discussion**  
 ```{R}
 # ====================================
 data <- read.xlsx("datafile.xls", sheetIndex=2)
@@ -94,13 +96,13 @@ data <- read.xls("datafile.xls", sheet=2)
 ```
 
 
-  * See Also  
+  * **See Also**  
 
 ## 1.5. Loading Data from an SPSS File
-  * Problem  
+  * **Problem**  
     You want to load data from an SPSS file.  
 
-  * Solution  
+  * **Solution**  
 ```{r}  
 # Only need to install the first time
 install.packages("foreign")
@@ -108,10 +110,10 @@ install.packages("foreign")
 library(foreign)
 data <- read.spss("datafile.sav")  
 ```
-  * Discussion  
+  * **Discussion**  
     The foreign package also includes functions to load from other formats, including:
     * read.octave(): Octave and MATLAB
     * read.systat(): SYSTAT
     * read.xport(): SAS XPORT
     * read.dta(): Stata
-  * See Also  
+  * **See Also**  

@@ -21,6 +21,7 @@ output: html_notebook
 
 * **Solution**  
 ```{R}      
+library(ggplot2)
 # The base plot
 p <- ggplot(mpg, aes(x=displ, y=hwy)) + geom_point()
 

@@ -5,7 +5,7 @@
 [O'reilly](http://shop.oreilly.com/product/0636920023135.do)
 
 ## Toc
-* **Chapter 1. R Basics**  
+* **[Chapter 1. R Basics](Ch01_R_Basics.Rmd)**  
   * 1.1. Installing a Package  
   * 1.2. Loading a Package  
   * 1.3. Loading a Delimited Text Data File  
